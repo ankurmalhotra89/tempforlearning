@@ -27,6 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
+        pip install coverage
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
@@ -37,3 +38,14 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Publish our test coverage report
+      run: |
+        pip install pytest pytest-cov
+        pytest test_add_numbers.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+    - name: Upload pytest test results
+      uses: actions/upload-artifact@v4
+      with:
+          name: pytest-results-${{ matrix.python-version }}
+          path: junit/test-results-${{ matrix.python-version }}.xml
+        # Use always() to always run this step to publish test results when there are test failures
+      if: ${{ always() }}

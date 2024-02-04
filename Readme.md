@@ -1,3 +1,7 @@
+
+[![Python application](https://github.com/ankurmalhotra89/tempforlearning/actions/workflows/python-app.yml/badge.svg)](https://github.com/ankurmalhotra89/tempforlearning/actions/workflows/python-app.yml)
+
+<hr>
 ATM SIMULATOR IN PYTHON
 
 Username: user2
