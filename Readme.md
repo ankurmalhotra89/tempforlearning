@@ -2,8 +2,14 @@
 [![Python application](https://github.com/ankurmalhotra89/tempforlearning/actions/workflows/python-app.yml/badge.svg)](https://github.com/ankurmalhotra89/tempforlearning/actions/workflows/python-app.yml)
 
 <hr>
-### Test Coverage Report
-[Link to coverage report](htmlcov/index.html)
+
+## Artifacts
+
+### Test Coverage Reports
+You can download the test coverage reports generated during the GitHub Actions workflow run.
+
+- [Download HTML Coverage Reports](https://github.com/ankurmalhotra89/tempforlearning/actions/runs/7775564407/artifacts/1218615144)
+
 
 <hr>
 ATM SIMULATOR IN PYTHON
