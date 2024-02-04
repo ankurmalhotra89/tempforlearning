@@ -40,6 +40,5 @@ jobs:
         pytest
     - name: Publish our test coverage report
       run: |
-        pytest
-        coverage run -m pytest
-        coverage html
+        pip install pytest pytest-cov
+        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
