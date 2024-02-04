@@ -54,7 +54,7 @@ jobs:
     - name: Upload pytest test results from coverage command 
       uses: actions/upload-artifact@v4
       with:
-          name: pytest-resultshtmlcoverage-${{ matrix.python-version }}
-          path: htmlcov/index.html
+          name: pytest-result-ankur
+          path: htmlcov/*
         # Use always() to always run this step to publish test results when there are test failures
       if: ${{ always() }}
