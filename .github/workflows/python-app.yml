@@ -41,7 +41,7 @@ jobs:
     - name: Publish our test coverage report
       run: |
         pip install pytest pytest-cov
-        pytest test_add_numbers.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+        pytest test_add_numbers.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml --cov=com --cov-report=html
     - name: Upload pytest test results
       uses: actions/upload-artifact@v4
       with:
